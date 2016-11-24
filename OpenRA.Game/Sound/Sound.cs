@@ -44,8 +44,21 @@ namespace OpenRA
 
 		public Sound(IPlatform platform, SoundSettings soundSettings)
 		{
-			soundEngine = platform.CreateSound(soundSettings.Device);
-
+            if (soundSettings.Device != null)
+            {
+                try
+                {
+                    soundEngine = platform.CreateSound(soundSettings.Device);
+                }
+                catch (Exception e)
+                {
+                    Log.Write("sound", "No sound device found, connect headphones or speakers:\n{0}", e);
+                }
+            }
+            else
+            {
+                soundSettings.Device = null;
+            }
 			if (soundSettings.Mute)
 				MuteAudio();
 		}
