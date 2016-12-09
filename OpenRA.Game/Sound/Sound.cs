@@ -44,7 +44,7 @@ namespace OpenRA
 
 		public Sound(IPlatform platform, SoundSettings soundSettings)
 		{
-            if (soundSettings.Device != null)
+            if (soundSettings.Device == null)
             {
                 try
                 {
