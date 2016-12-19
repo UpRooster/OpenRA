@@ -94,6 +94,9 @@ E4:
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 E5:
 	Inherits: ^Soldier

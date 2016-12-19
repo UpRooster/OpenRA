@@ -161,6 +161,9 @@ E4:
 		DefaultAttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
 
 E6:
 	Inherits: ^Soldier
